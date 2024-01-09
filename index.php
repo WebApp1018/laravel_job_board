@@ -1,0 +1,1 @@
+Hello this is test index file, if this is working, there is no issue with hosting.

@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.bg-color-danger {
+    background-color: #e60e10;
+}
+.bg-color-secondary {
+    background-color: #575757;
+}
+.bg-gray {
+    background-color: #f2f2f2;
+}
+.bg-red {
+    background-color: #ff1c1c;
+}
+.text-red {
+    color: #ff1c1c;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.header-left img {
+    height: 40px;
+}
+
+.header-navlink {
+    padding: 5px 30px;
+    margin-right: 10px;
+    border-radius: 20px;
+    font-size: .9rem;
+    font-weight: 500;
+    transition: .5s;
+}
+
+.header-navlink:first-child {
+    font-weight: 600;
+    padding: 5px 10px;
+}
+
+.login-link {
+    border: 2px solid #e60e10;
+}
+.login-link:hover {
+    background: none;
+    color: #e60e10 !important;
+}
+
+.signup-link {
+    border: 2px solid #575757;
+}
+.signup-link:hover {
+    background: none;
+    color: #575757 !important;
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 60px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 60px);
+    padding: 30px;
+    transition: .5s;
+}
+
+.mobile-menu.active {
+    left: 0;
+}
+
+.mobile-menu a {
+    display: block;
+    width: fit-content;
+    margin-right: 0;
+    margin-bottom: 10px;
+}
+
+#menu{
+    width: 30px;
+    height: 30px;
+    transition: .5s;
+    display: none;
+  }
+  
+  .menu-line1{
+    width: 100%;
+    height: 2px;
+    background: #000;
+    transition: .6s;
+  }
+  
+  .menu-line2{
+    width: 80%;
+    height: 2px;
+    margin-top: .7rem;
+    background: #000;
+    transition: .6s;
+  }
+  
+  .rotate{
+    transform: rotateZ(180deg)
+  }
+  .rotate1{
+    background: #212121;
+    transform: rotateZ(45deg);
+  }
+  .rotate2{
+    background: #212121;
+    width: 100%;
+    transform:  translate(0,-0.8rem) rotateZ(-45deg);
+  }
+
+.banner {
+    width: 100%;
+    height: calc(100vh - 60px);
+    background-image: url('./assets/img/banner-bg.svg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+.banner h1 {
+    font-weight: 700;
+    font-size: 75px;
+    margin-bottom: 0;
+}
+
+.banner h2 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 60px;
+}
+
+.banner p {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.banner-form h3 {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.banner-form-container {
+    height: 35px;
+    width: 360px;
+    max-width: 100%;
+    display: flex;
+    border: 1px solid #000;
+    border-radius: 10px 20px 20px 10px;
+}
+
+.banner-form-container input {
+    height: 100%;
+    flex: 1;
+    padding: 0 10px;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: .9rem;
+}
+
+.banner-form-container button {
+    height: 100%;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 0 20px;
+    border-radius: 20px;
+}
+
+.section-title {
+    width: 100%;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.steps-mobile {
+    display: none;
+}
+
+.steps-text {
+    width: 83%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.steps-text span {
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.faq {
+    background-image: url('./assets/img/faq-bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.faq .accordion * {
+    color: #fff;
+}
+
+.faq .accordion-item {
+    background: none;
+    border: 1px solid #000;
+    border-radius: 0;
+    margin-bottom: 20px;
+}
+.faq .accordion-button {
+    background: none;
+    font-size: 22px;
+    font-weight: 700;
+}
+.faq .accordion-button::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+.faq .accordion-button:focus {
+    box-shadow: none;
+}
+.faq .accordion-body {
+    font-size: 20px;
+}
+
+footer {
+    background-image: url('./assets/img/footer-bg.png');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    text-align: center;
+    bottom: 0px !important;
+    position: relative;
+    width: 100%;
+}
+
+footer p {
+    font-weight: 600;
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    width: 100%;
+}
+
+footer p img {
+    height: 15px;
+    margin-right: 5px;
+    margin-bottom: 3px;
+    /* margin-top: 5px; */
+}
+
+footer h5 {
+    font-weight: 600;
+}
+
+footer .copyright {
+    border-top: 1px solid #e60e10;
+    font-weight: 600;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+/* Added for Blogs and signup signin and forget password pages */
+.text-space {
+    letter-spacing: 0.1em;;
+}
+
+.header-navlink small {
+    font-size: 10px;
+}
+
+.card-img {
+    max-width : 400px;
+    max-height: 200px;
+}
+
+.fs-12 {
+    font-size: 12px;
+}
+
+.card-height {
+    min-height: 393px ;
+}

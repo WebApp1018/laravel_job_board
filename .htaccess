@@ -1,0 +1,29 @@
+RewriteEngine On 
+RewriteCond %{SERVER_PORT} 80
+RewriteCond %{HTTP_HOST} ^(www\.)?vergecad\.info
+RewriteRule ^(.*)$ https://www.vergecad.info/$1 [R,L]
+
+# BEGIN - Allow Sucuri Services
+Header set Access-Control-Allow-Origin *
+
+
+<IfModule mod_rewrite.c>
+  RewriteRule ^sucuri-(.*)\.php$ - [L]
+</IfModule>
+# END - Allow Sucuri Services
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    #RewriteCond %{HTTPS} !=on    
+    #RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+    #RewriteRule ^(.*)$ public/$1 [L]
+    
+
+    # remove trailing slash
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} (.+)/$
+    RewriteRule ^ %1 [L,R=301,NE]
+    
+    # route all requests to public/
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
+
